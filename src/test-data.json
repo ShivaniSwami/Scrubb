@@ -1,0 +1,75 @@
+[
+  {
+    "id": "log-001",
+    "timestamp": "2026-01-09T14:32:15Z",
+    "action": "user_login",
+    "user": {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@techcorp.io",
+      "ip_address": "203.45.67.89"
+    },
+    "metadata": {
+      "browser": "Chrome 120",
+      "os": "Windows 11"
+    }
+  },
+  {
+    "id": "log-002",
+    "timestamp": "2026-01-09T14:35:22Z",
+    "action": "profile_update",
+    "user": {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@techcorp.io",
+      "ip_address": "203.45.67.89"
+    },
+    "changes": {
+      "phone": "+1-555-123-4567",
+      "address": "123 Oak Street, Seattle, WA"
+    }
+  },
+  {
+    "id": "log-003",
+    "timestamp": "2026-01-09T15:01:45Z",
+    "action": "api_request",
+    "client": {
+      "name": "Bob Martinez",
+      "email": "bob.martinez@startup.com",
+      "ip_address": "98.234.156.201"
+    },
+    "request": {
+      "endpoint": "/api/users",
+      "method": "GET",
+      "response_code": 200
+    }
+  },
+  {
+    "id": "log-004",
+    "timestamp": "2026-01-09T15:12:33Z",
+    "action": "payment_processed",
+    "customer": {
+      "full_name": "Catherine O'Brien",
+      "billing_email": "catherine.obrien@gmail.com",
+      "source_ip": "172.16.45.123"
+    },
+    "transaction": {
+      "amount": 299.99,
+      "currency": "USD",
+      "status": "completed"
+    }
+  },
+  {
+    "id": "log-005",
+    "timestamp": "2026-01-09T16:45:00Z",
+    "action": "error_report",
+    "reporter": {
+      "name": "Alice Johnson",
+      "contact": "alice.johnson@techcorp.io"
+    },
+    "error": {
+      "code": "ERR_CONNECTION_REFUSED",
+      "server_ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "fallback_ip": "192.168.1.50"
+    },
+    "notes": "User Alice Johnson reported connection issues from IP 203.45.67.89"
+  }
+]

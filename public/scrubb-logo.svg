@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="scrubbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer shield/bubble shape -->
+  <path d="M24 4C14 4 6 10 6 18v10c0 10 8 16 18 16s18-6 18-16V18c0-8-8-14-18-14z" 
+        fill="url(#scrubbGrad)" opacity="0.15"/>
+  <!-- Scrub brush bristles -->
+  <g stroke="url(#scrubbGrad)" stroke-width="2.5" stroke-linecap="round">
+    <line x1="16" y1="20" x2="16" y2="30"/>
+    <line x1="21" y1="18" x2="21" y2="32"/>
+    <line x1="27" y1="18" x2="27" y2="32"/>
+    <line x1="32" y1="20" x2="32" y2="30"/>
+  </g>
+  <!-- Sparkle/clean indicator -->
+  <circle cx="36" cy="14" r="2" fill="#06b6d4"/>
+  <circle cx="40" cy="10" r="1.5" fill="#a855f7" opacity="0.7"/>
+</svg>
