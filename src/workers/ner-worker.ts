@@ -23,19 +23,22 @@ let nerPipeline: TokenClassificationPipeline | null = null;
 // Initialize the NER pipeline
 async function initPipeline() {
     try {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        // @ts-expect-error - pipeline() return type is too complex for TypeScript
         nerPipeline = await pipeline(
             'token-classification',
             'Xenova/bert-base-NER',
             {
-                progress_callback: (progress: { progress: number }) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                progress_callback: (progress: any) => {
                     const response: WorkerResponse = {
                         type: 'init-progress',
-                        progress: progress.progress || 0
+                        progress: progress?.progress ?? 0
                     };
                     self.postMessage(response);
                 }
             }
-        );
+        ) as TokenClassificationPipeline;
 
         const response: WorkerResponse = { type: 'init-complete' };
         self.postMessage(response);
